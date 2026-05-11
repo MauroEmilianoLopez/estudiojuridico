@@ -54,7 +54,7 @@
       </a>
     </div>
     <div class="flex items-center gap-5">
-      <a href="https://instagram.com" target="_blank" class="text-gold/50 hover:text-gold transition-colors flex items-center gap-1.5 text-[11px] tracking-wider">
+      <a href="https://instagram.com" target="_blank" class="text-gold/50 hover:text-gold transition-colors flex items-center gap-1.5 text-[11px] tracking-wider" aria-label="Instagram del estudio">
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
         Instagram
       </a>
@@ -79,12 +79,12 @@
       <a href="#socios" class="nav-link">El Estudio</a>
       <a href="#ubicacion" class="nav-link">Ubicación</a>
       <a href="#contacto" class="nav-link">Contacto</a>
-      <a href="https://instagram.com" target="_blank" class="text-gold/50 hover:text-gold transition-colors">
+      <a href="https://instagram.com" target="_blank" class="text-gold/50 hover:text-gold transition-colors" aria-label="Instagram del estudio">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
       </a>
       <a href="https://wa.me/5492664859618" target="_blank" class="btn-gold px-5 py-2.5 rounded-sm">Consulta Privada</a>
     </div>
-    <button class="md:hidden text-gold" onclick="document.getElementById('mnav').classList.toggle('hidden')">
+    <button class="md:hidden text-gold" aria-label="Abrir menú de navegación" onclick="document.getElementById('mnav').classList.toggle('hidden')">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
   </div>
@@ -166,21 +166,21 @@
       <div class="flex items-center gap-5 px-8 py-8">
         <svg class="w-8 h-8 flex-shrink-0" style="color:#c5a059" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
         <div>
-          <h3 class="font-sans font-600 text-xs tracking-widest uppercase mb-1" style="color:#c5a059">Excelencia</h3>
+          <h2 class="font-sans font-600 text-xs tracking-widest uppercase mb-1" style="color:#c5a059">Excelencia</h2>
           <p class="font-sans text-xs leading-relaxed" style="color:rgba(226,217,200,.45)">Rigor técnico en cada caso y proceso.</p>
         </div>
       </div>
       <div class="flex items-center gap-5 px-8 py-8">
         <svg class="w-8 h-8 flex-shrink-0" style="color:#c5a059" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         <div>
-          <h3 class="font-sans font-600 text-xs tracking-widest uppercase mb-1" style="color:#c5a059">Confidencialidad</h3>
+          <h2 class="font-sans font-600 text-xs tracking-widest uppercase mb-1" style="color:#c5a059">Confidencialidad</h2>
           <p class="font-sans text-xs leading-relaxed" style="color:rgba(226,217,200,.45)">Su información, protegida con total discreción.</p>
         </div>
       </div>
       <div class="flex items-center gap-5 px-8 py-8">
         <svg class="w-8 h-8 flex-shrink-0" style="color:#c5a059" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
         <div>
-          <h3 class="font-sans font-600 text-xs tracking-widest uppercase mb-1" style="color:#c5a059">Cercanía</h3>
+          <h2 class="font-sans font-600 text-xs tracking-widest uppercase mb-1" style="color:#c5a059">Cercanía</h2>
           <p class="font-sans text-xs leading-relaxed" style="color:rgba(226,217,200,.45)">Trato directo con los socios fundadores.</p>
         </div>
       </div>
@@ -380,6 +380,7 @@
       <div class="lg:col-span-2 si">
         <div class="map-wrap rounded-sm overflow-hidden" style="height:380px;border:1px solid rgba(197,160,89,.2)">
           <iframe
+            title="Mapa de ubicación del estudio"
             src="https://maps.google.com/maps?q=San+Mart%C3%ADn+540,+San+Luis,+Argentina&output=embed&z=16"
             width="100%"
             height="400"
@@ -430,8 +431,8 @@
           </div>
         </div>
         <div>
-          <label class="font-sans text-[10px] tracking-widest uppercase block mb-2" style="color:rgba(197,160,89,.5)">Área de consulta</label>
-          <select name="especialidad" style="width:100%;background:rgba(10,15,26,.9);border:1px solid rgba(197,160,89,.2);color:rgba(226,217,200,.6);padding:12px 14px;font-family:Montserrat,sans-serif;font-size:13px;outline:none" onfocus="this.style.borderColor='rgba(197,160,89,.6)'" onblur="this.style.borderColor='rgba(197,160,89,.2)'">
+          <label for="especialidad" class="font-sans text-[10px] tracking-widest uppercase block mb-2" style="color:rgba(197,160,89,.5)">Área de consulta</label>
+          <select id="especialidad" name="especialidad" style="width:100%;background:rgba(10,15,26,.9);border:1px solid rgba(197,160,89,.2);color:rgba(226,217,200,.6);padding:12px 14px;font-family:Montserrat,sans-serif;font-size:13px;outline:none" onfocus="this.style.borderColor='rgba(197,160,89,.6)'" onblur="this.style.borderColor='rgba(197,160,89,.2)'">
             <option value="">Seleccione un área</option>
             <option value="Derecho de Familia & Sucesiones" style="background:#0a0f1a">Derecho de Familia & Sucesiones</option>
             <option value="Derecho Penal" style="background:#0a0f1a">Derecho Penal</option>
@@ -447,8 +448,7 @@
     </div>
   </div>
 </section>
-
-<!-- MAPA -->
+</main>
 <!-- FOOTER -->
 <footer style="background:#070b14;border-top:1px solid rgba(197,160,89,.12)">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -467,7 +467,7 @@
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
             Instagram
           </a>
-          <a href="https://wa.me/5492664859618" target="_blank" style="color:rgba(197,160,89,.5);transition:color .2s" onmouseover="this.style.color='#c5a059'" onmouseout="this.style.color='rgba(197,160,89,.5)'">
+          <a href="https://wa.me/5492664859618" target="_blank" aria-label="WhatsApp del estudio" style="color:rgba(197,160,89,.5);transition:color .2s" onmouseover="this.style.color='#c5a059'" onmouseout="this.style.color='rgba(197,160,89,.5)'">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.552 4.1 1.516 5.824L0 24l6.335-1.493A11.936 11.936 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
           </a>
         </div>
@@ -498,7 +498,7 @@
 </footer>
 
 <!-- WhatsApp flotante -->
-<a href="https://wa.me/5492664859618" target="_blank" class="wa-float">
+<a href="https://wa.me/5492664859618" target="_blank" class="wa-float" aria-label="Agendar consulta privada por WhatsApp">
   <svg class="w-5 h-5 text-white flex-shrink-0" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.115.552 4.1 1.516 5.824L0 24l6.335-1.493A11.936 11.936 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.782 9.782 0 01-4.988-1.364l-.358-.213-3.761.886.938-3.657-.233-.374A9.78 9.78 0 012.182 12C2.182 6.586 6.586 2.182 12 2.182c5.414 0 9.818 4.404 9.818 9.818 0 5.414-4.404 9.818-9.818 9.818z"/></svg>
   <span class="font-sans text-white font-600 text-xs tracking-wider hidden sm:block">Agendar Consulta Privada</span>
 </a>
