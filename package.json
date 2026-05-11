@@ -1,0 +1,25 @@
+{
+  "name": "estudiojuridico",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/styles.css --minify",
+    "watch:css": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MauroEmilianoLopez/estudiojuridico.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MauroEmilianoLopez/estudiojuridico/issues"
+  },
+  "homepage": "https://github.com/MauroEmilianoLopez/estudiojuridico#readme",
+  "description": "Barchilón & Trusendi Abogados — San Luis",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "tailwindcss": "^4.3.0"
+  }
+}
