@@ -378,17 +378,40 @@
       </div>
       <!-- Mapa -->
       <div class="lg:col-span-2 si">
-        <div class="map-wrap rounded-sm overflow-hidden" style="height:380px;border:1px solid rgba(197,160,89,.2)">
-          <iframe
-            title="Mapa de ubicación del estudio"
-            src="https://maps.google.com/maps?q=San+Mart%C3%ADn+540,+San+Luis,+Argentina&output=embed&z=16"
-            width="100%"
-            height="400"
-            style="border:0;display:block"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div class="map-wrap rounded-sm overflow-hidden" style="min-height:380px;border:1px solid rgba(197,160,89,.2);background:linear-gradient(180deg, rgba(22,31,53,.92), rgba(10,15,26,.98));">
+          <div class="h-full flex flex-col justify-between p-8 md:p-10">
+            <div>
+              <p class="font-sans text-[10px] tracking-[.35em] uppercase mb-4" style="color:rgba(197,160,89,.65)">Ubicación</p>
+              <h3 class="font-serif text-3xl md:text-4xl mb-4" style="color:#f0e8d5">San Martín 540</h3>
+              <p class="font-sans text-base md:text-lg leading-relaxed mb-8" style="color:rgba(226,217,200,.65)">
+                Dpto. 3<br/>
+                San Luis, Argentina
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-sm flex items-center justify-center flex-shrink-0" style="background:rgba(197,160,89,.08);border:1px solid rgba(197,160,89,.22)">
+                  <svg class="w-5 h-5" style="color:#c5a059" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/>
+                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-sans text-xs tracking-widest uppercase mb-1" style="color:rgba(197,160,89,.55)">Punto de encuentro</p>
+                  <p class="font-sans text-sm" style="color:rgba(226,217,200,.65)">Atención personalizada con cita previa</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-10">
+              <a href="https://www.google.com/maps/search/?api=1&query=San+Mart%C3%ADn+540,+San+Luis,+Argentina" target="_blank" rel="noopener noreferrer" class="btn-outline px-6 py-3 rounded-sm inline-flex items-center gap-2 w-fit">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                </svg>
+                Cómo llegar
+              </a>
+              <p class="font-sans text-[11px] mt-4" style="color:rgba(226,217,200,.35)">
+                Abrir en Google Maps para ver rutas y referencias cercanas.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
