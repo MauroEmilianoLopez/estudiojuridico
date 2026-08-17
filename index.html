@@ -431,6 +431,10 @@
           </div>
         </div>
         <div>
+          <label class="font-sans text-[10px] tracking-widest uppercase block mb-2" style="color:rgba(197,160,89,.5)">Teléfono (opcional)</label>
+          <input type="tel" name="telefono" placeholder="+54 9 266 485-9618" style="width:100%;background:rgba(10,15,26,.6);border:1px solid rgba(197,160,89,.2);color:#e2d9c8;padding:12px 14px;font-family:Montserrat,sans-serif;font-size:13px;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(197,160,89,.6)'" onblur="this.style.borderColor='rgba(197,160,89,.2)'"/>
+        </div>
+        <div>
           <label for="especialidad" class="font-sans text-[10px] tracking-widest uppercase block mb-2" style="color:rgba(197,160,89,.5)">Área de consulta</label>
           <select id="especialidad" name="especialidad" style="width:100%;background:rgba(10,15,26,.9);border:1px solid rgba(197,160,89,.2);color:rgba(226,217,200,.6);padding:12px 14px;font-family:Montserrat,sans-serif;font-size:13px;outline:none" onfocus="this.style.borderColor='rgba(197,160,89,.6)'" onblur="this.style.borderColor='rgba(197,160,89,.2)'">
             <option value="">Seleccione un área</option>
@@ -508,15 +512,27 @@
 (function(){
   var form=document.getElementById('contactForm');
   var feedback=document.getElementById('form-feedback');
+  var submitButton=form?form.querySelector('button[type="submit"]'):null;
+  var submitLabel=submitButton?submitButton.textContent:'Enviar Consulta';
+  var isSubmitting=false;
   if(!form)return;
   form.addEventListener('submit',async function(e){
     e.preventDefault();
+    if(isSubmitting)return;
     var nombre=form.querySelector('[name="nombre"]').value.trim();
     var email=form.querySelector('[name="email"]').value.trim();
+    var telefono=form.querySelector('[name="telefono"]').value.trim();
     var especialidad=form.querySelector('[name="especialidad"]').value;
     var notas=form.querySelector('[name="notas"]').value.trim();
     if(!nombre||!email||!notas)return;
-    var payload={nombre:nombre,email:email,telefono:'',notas:especialidad?'['+especialidad+'] '+notas:notas};
+    var payload={nombre:nombre,email:email,telefono:telefono,notas:especialidad?'['+especialidad+'] '+notas:notas};
+    isSubmitting=true;
+    if(submitButton){
+      submitButton.disabled=true;
+      submitButton.style.opacity='.7';
+      submitButton.style.cursor='not-allowed';
+      submitButton.textContent='Enviando...';
+    }
     feedback.className='font-sans text-xs mb-4 px-4 py-3';
     feedback.style.background='rgba(197,160,89,.15)';
     feedback.style.color='#e8d5a3';
@@ -537,6 +553,14 @@
       feedback.style.background='rgba(220,38,38,.15)';
       feedback.style.color='#fca5a5';
       feedback.textContent='Hubo un error al enviar su consulta. Por favor, escríbanos por WhatsApp o intente de nuevo.';
+    }finally{
+      isSubmitting=false;
+      if(submitButton){
+        submitButton.disabled=false;
+        submitButton.style.opacity='';
+        submitButton.style.cursor='';
+        submitButton.textContent=submitLabel;
+      }
     }
   });
 })();
