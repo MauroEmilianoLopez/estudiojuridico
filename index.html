@@ -443,6 +443,11 @@
       <p class="font-sans text-xs mb-8" style="color:rgba(197,160,89,.5);letter-spacing:.1em">Confidencial · Sin compromiso</p>
       <div id="form-feedback" class="hidden font-sans text-xs mb-4 px-4 py-3" style="border-radius:2px"></div>
       <form id="contactForm" class="space-y-5">
+        <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">
+          <label for="website">Website</label>
+          <input id="website" type="text" name="website" tabindex="-1" autocomplete="off"/>
+        </div>
+        <input type="hidden" name="formStartedAt" value=""/>
         <div class="grid grid-cols-2 gap-4">
           <div>
             <label class="font-sans text-[10px] tracking-widest uppercase block mb-2" style="color:rgba(197,160,89,.5)">Nombre</label>
@@ -537,8 +542,10 @@
   var feedback=document.getElementById('form-feedback');
   var submitButton=form?form.querySelector('button[type="submit"]'):null;
   var submitLabel=submitButton?submitButton.textContent:'Enviar Consulta';
+  var formStartedAtInput=form?form.querySelector('[name="formStartedAt"]'):null;
   var isSubmitting=false;
   if(!form)return;
+  if(formStartedAtInput)formStartedAtInput.value=String(Date.now());
   form.addEventListener('submit',async function(e){
     e.preventDefault();
     if(isSubmitting)return;
@@ -547,8 +554,10 @@
     var telefono=form.querySelector('[name="telefono"]').value.trim();
     var especialidad=form.querySelector('[name="especialidad"]').value;
     var notas=form.querySelector('[name="notas"]').value.trim();
+    var website=form.querySelector('[name="website"]').value.trim();
+    var formStartedAt=formStartedAtInput&&formStartedAtInput.value?formStartedAtInput.value:String(Date.now());
     if(!nombre||!email||!notas)return;
-    var payload={nombre:nombre,email:email,telefono:telefono,notas:especialidad?'['+especialidad+'] '+notas:notas};
+    var payload={nombre:nombre,email:email,telefono:telefono,notas:especialidad?'['+especialidad+'] '+notas:notas,website:website,formStartedAt:formStartedAt};
     isSubmitting=true;
     if(submitButton){
       submitButton.disabled=true;
